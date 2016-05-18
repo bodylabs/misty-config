@@ -15,5 +15,6 @@
     "config": "^1.20.2",
     "recursive-readdir-sync": "^1.0.6",
     "underscore": "^1.8.3"
-  }
+  },
+  "webpackLoader": "webpack-loader.js"
 }
