@@ -1,0 +1,26 @@
+{
+  "name": "misty-config",
+  "version": "1.0.0",
+  "description": "Cascading configuration with environment variable support",
+  "main": "index.js",
+  "scripts": {
+    "lint:jscs": "jscs --config node_modules/bodylabs-javascript-style/jscs/jscsrc-shared *.js . --extract '*.js'",
+    "test": "npm run lint:jscs"
+  },
+  "author": "Body Labs Inc.",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bodylabs/misty-config.git"
+  },
+  "dependencies": {
+    "config": "^1.20.2",
+    "recursive-readdir-sync": "^1.0.6",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "bodylabs-javascript-style": "^5.0.0",
+    "jscs": "^2.11.0"
+  },
+  "webpackLoader": "webpack-loader.js"
+}
