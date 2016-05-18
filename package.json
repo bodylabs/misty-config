@@ -1,0 +1,19 @@
+{
+  "name": "misty-config",
+  "version": "1.0.0",
+  "description": "Cascading configuration with environment variable support",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Body Labs Inc.",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bodylabs/misty-config.git"
+  },
+  "dependencies": {
+    "config": "^1.20.2",
+    "recursive-readdir-sync": "^1.0.6",
+    "underscore": "^1.8.3"
+  }
+}
