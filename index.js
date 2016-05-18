@@ -1,7 +1,7 @@
-const util = require('util'),
-      path = require('path'),
-      _ = require('underscore'),
-      config = require('config');
+var util = require('util'),
+    path = require('path'),
+    _ = require('underscore'),
+    config = require('config');
 
 
 config.util.substituteEnv = function (config) {
