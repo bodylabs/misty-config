@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "config": "^1.20.2",
-    "hjson": "^1.8.4",
     "recursive-readdir-sync": "^1.0.6",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "yaml": "^0.3.0"
   },
   "devDependencies": {
     "bodylabs-javascript-style": "^5.0.0",
