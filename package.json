@@ -1,6 +1,6 @@
 {
   "name": "misty-config",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Cascading configuration with environment variable support",
   "main": "index.js",
   "scripts": {
