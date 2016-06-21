@@ -1,6 +1,6 @@
 var util = require('util'),
     path = require('path'),
-    _ = require('underscore'),
+    _ = require('lodash'),
     config = require('config');
 
 

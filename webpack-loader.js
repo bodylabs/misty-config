@@ -1,8 +1,13 @@
-var util = require('util'),
-    path = require('path'),
-    _ = require('underscore'),
-    recursive = require('recursive-readdir-sync'),
-    config = require('./index');
+var get = require('lodash/get');
+var has = require('lodash/has');
+var isArray = require('lodash/isArray');
+var loaderUtils = require('loader-utils');
+var path = require('path');
+var recursive = require('recursive-readdir-sync');
+var set = require('lodash/set');
+var util = require('util');
+
+var config = require('./index');
 
 //
 // At build time, the configs are parsed from hjson to json,
@@ -32,5 +37,21 @@ module.exports = function () {
 
     this.cacheable();
 
-    return util.format("module.exports = %s;", JSON.stringify(config));
+    var query = loaderUtils.parseQuery(this.query);
+
+    if (! isArray(query.whitelist)) {
+        throw new Error('No config property whitelist was specified! ' +
+            'To use misty-config as a webpack loader you must specify a whitelist as a query parameter.');
+    }
+
+    var whitelistReducer = function (obj, path) {
+        if (has(config, path)) {
+            set(obj, path, get(config, path));
+        }
+        return obj;
+    };
+
+    var whitelistedConfig = query.whitelist.reduce(whitelistReducer, {});
+
+    return util.format("module.exports = %s;", JSON.stringify(whitelistedConfig));
 };
