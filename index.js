@@ -1,7 +1,7 @@
-var util = require('util'),
-    path = require('path'),
-    _ = require('lodash'),
-    config = require('config');
+var _ = require('lodash');
+var config = require('config');
+var path = require('path');
+var util = require('util');
 
 
 var substituteEnv = function (config) {
